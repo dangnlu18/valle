@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Banner from '../components/Banner'
 
 
 const Home: NextPage = () => {
@@ -16,7 +17,9 @@ const Home: NextPage = () => {
       {/* header will go here  */}
       <Header />
       {/* there is a banner here  */}
+      <Banner />
       {/* <Footer />  */}
+
 
       
     </div>
