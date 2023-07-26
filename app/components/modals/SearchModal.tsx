@@ -117,24 +117,23 @@ const SearchModal = () => {
     return 'Back'
   }, [step]);
 
-  let bodyContent = (
-    <div className="flex flex-col gap-8">
-      <Heading
-        title="Where do you wanna go?"
-        subtitle="Find the perfect location!"
-      />
-      <CountrySelect 
-        value={location} 
-        onChange={(value) => 
-          setLocation(value as CountrySelectValue)} 
-      />
-      <hr />
-      <Map center={location?.latlng} />
-    </div>
-  )
+  // let bodyContent = (
+  //   <div className="flex flex-col gap-8">
+  //     <Heading
+  //       title="Where do you wanna go?"
+  //       subtitle="Find the perfect location!"
+  //     />
+  //     <CountrySelect 
+  //       value={location} 
+  //       onChange={(value) => 
+  //         setLocation(value as CountrySelectValue)} 
+  //     />
+  //     <hr />
+  //     <Map center={location?.latlng} />
+  //   </div>
+  // )
 
-  if (step === STEPS.DATE) {
-    bodyContent = (
+  let bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
           title="When do you plan to go?"
@@ -146,7 +145,7 @@ const SearchModal = () => {
         />
       </div>
     )
-  }
+  
 
   if (step === STEPS.INFO) {
     bodyContent = (
@@ -169,14 +168,14 @@ const SearchModal = () => {
           subtitle="How many rooms do you need?"
         />        
         <hr />
-        <Counter 
+        {/* <Counter 
           onChange={(value) => {
             setBathroomCount(value)
           }}
           value={bathroomCount}
           title="Bathrooms"
           subtitle="How many bahtrooms do you need?"
-        />
+        /> */}
       </div>
     )
   }

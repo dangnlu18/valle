@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
-import { PiWineDuotone}from 'react-icons/pi';
+import { PiWineDuotone, PiSuitcase}from 'react-icons/pi';
 import { RiRestaurantLine } from 'react-icons/ri';
 import { BiCalendarStar } from 'react-icons/bi';
 
@@ -25,7 +25,13 @@ export const categories = [
     label: 'Restaurants',
     icon: RiRestaurantLine,
     description: 'Try some amazing restaurants nearby!'
+  },
+  {
+    label: 'Packages',
+    icon: PiSuitcase,
+    description: 'Check out some of our amazing bundled packages!'
   }
+
 
 
 
