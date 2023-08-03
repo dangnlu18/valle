@@ -18,7 +18,6 @@ import CountrySelect, {
 import Heading from '../Heading';
 
 enum STEPS {
-  LOCATION = 0,
   DATE = 1,
   INFO = 2,
 }
@@ -28,7 +27,7 @@ const SearchModal = () => {
   const searchModal = useSearchModal();
   const params = useSearchParams();
 
-  const [step, setStep] = useState(STEPS.LOCATION);
+  const [step, setStep] = useState(STEPS.DATE);
 
   const [location, setLocation] = useState<CountrySelectValue>();
   const [guestCount, setGuestCount] = useState(1);
@@ -84,7 +83,7 @@ const SearchModal = () => {
       query: updatedQuery,
     }, { skipNull: true });
 
-    setStep(STEPS.LOCATION);
+    setStep(STEPS.DATE);
     searchModal.onClose();
     router.push(url);
   }, 
@@ -110,7 +109,7 @@ const SearchModal = () => {
   }, [step]);
 
   const secondaryActionLabel = useMemo(() => {
-    if (step === STEPS.LOCATION) {
+    if (step === STEPS.DATE) {
       return undefined
     }
 
@@ -187,7 +186,7 @@ const SearchModal = () => {
       actionLabel={actionLabel}
       onSubmit={onSubmit}
       secondaryActionLabel={secondaryActionLabel}
-      secondaryAction={step === STEPS.LOCATION ? undefined : onBack}
+      secondaryAction={step === STEPS.DATE ? undefined : onBack}
       onClose={searchModal.onClose}
       body={bodyContent}
     />
