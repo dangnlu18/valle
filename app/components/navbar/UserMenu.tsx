@@ -43,7 +43,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   return ( 
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        <div 
+        {/* <div 
           onClick={onRent}
           className="
             hidden
@@ -59,7 +59,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
           "
         >
           Airbnb your home
-        </div>
+        </div> */}
         <div 
         onClick={toggleOpen}
         className="
@@ -90,11 +90,11 @@ const UserMenu: React.FC<UserMenuProps> = ({
             absolute 
             rounded-xl 
             shadow-md
-            w-[40vw]
+            min-w-max
             md:w-3/4 
             bg-white 
-            overflow-hidden 
-            right-0 
+            overflow-hidden
+            left-0 
             top-12 
             text-sm
           "
@@ -113,14 +113,6 @@ const UserMenu: React.FC<UserMenuProps> = ({
                 <MenuItem 
                   label="My reservations" 
                   onClick={() => router.push('/reservations')}
-                />
-                <MenuItem 
-                  label="My properties" 
-                  onClick={() => router.push('/properties')}
-                />
-                <MenuItem 
-                  label="Airbnb your home" 
-                  onClick={rentModal.onOpen}
                 />
                 <hr />
                 <MenuItem 

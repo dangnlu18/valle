@@ -14,7 +14,7 @@ import getCurrentUser from './actions/getCurrentUser';
 
 export const metadata = {
   title: 'Casas Milu',
-  description: 'Beautiful boutique hotel located in the Valle de Guadalupe',
+  description: 'Beautiful boutique hotel located in Valle de Guadalupe',
 }
 
 const font = Nunito({ 
