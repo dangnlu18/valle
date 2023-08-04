@@ -7,6 +7,8 @@ import getListings, {
 } from "@/app/actions/getListings";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
+import Carousel from  './components/Carousel'
+import Info from "./components/info/Info";
 
 interface HomeProps {
   searchParams: IListingsParams
@@ -16,18 +18,18 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
-  if (listings.length === 0) {
-    return (
-      <ClientOnly>
-        <EmptyState showReset />
-      </ClientOnly>
-    );
-  }
+  // if (listings.length === 0) {
+  //   return (
+  //     <ClientOnly>
+  //       <EmptyState showReset />
+  //     </ClientOnly>
+  //   );
+  // }
 
   return (
     <ClientOnly>
-      <Container>
-        <div 
+      <div className="flex flex-col margin">
+        {/* <div 
           className="
             pt-24
             grid 
@@ -47,8 +49,16 @@ const Home = async ({ searchParams }: HomeProps) => {
               data={listing}
             />
           ))}
+        </div> */}
+        <div
+        className="h-full w-content"
+        >
+        <Carousel />
         </div>
-      </Container>
+        <Info />
+        
+          
+      </div>
     </ClientOnly>
   )
 }

@@ -8,6 +8,8 @@ const nextConfig = {
       "res.cloudinary.com",
       "avatars.githubusercontent.com",
       "lh3.googleusercontent.com",
+      "kb.rspca.org.au",
+      "hips.hearstapps.com"
     ],
   },
 };
