@@ -12,14 +12,15 @@ import Container from "./Container";
         // console.log(Resources)
       
       return (
-    
+            <Container>
+
                 <Carousel
                     
                     showArrows={true}
                     showIndicators={false}
                     infiniteLoop={true}
                     dynamicHeight={true}
-                    autoPlay={true}
+                    autoPlay={false}
                     emulateTouch={true}
                     
                     >
@@ -30,6 +31,7 @@ import Container from "./Container";
                         })}
 
                 </Carousel>
+            </Container>
         
       );
     }

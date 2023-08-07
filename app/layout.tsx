@@ -11,7 +11,6 @@ import ToasterProvider from '@/app/providers/ToasterProvider';
 import './globals.css'
 import ClientOnly from './components/ClientOnly';
 import getCurrentUser from './actions/getCurrentUser';
-import DetailBar from './components/detailbar/Detailbar';
 
 export const metadata = {
   title: 'Casas Milu',
@@ -38,7 +37,6 @@ export default async function RootLayout({
           <RegisterModal />
           <SearchModal />
           <RentModal />
-          <DetailBar />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
         <div className="pb-20 pt-28">
